@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import {computed, onMounted, ref} from 'vue';
-import {useVariableWidthBox} from "./composables/variableWidthBox.ts";
-
+import {computed, ref} from 'vue';
 
 const props = withDefaults(defineProps<{
   pos?: 'left' | 'right',
