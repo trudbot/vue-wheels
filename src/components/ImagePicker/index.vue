@@ -16,8 +16,8 @@ function select(e: Event) {
 </script>
 
 <template>
-  <div class="fill-up img-picker-container" :class="{uploading: uploadState}">
-    <img :src="url" alt="avatar">
+  <div class="fill-up img-picker-container" :class="{uploading: props.uploadState}">
+    <img :src="props.url" alt="avatar">
     <input type="file" class="fill-up" @change="select" accept="image/*">
   </div>
 </template>
