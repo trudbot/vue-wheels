@@ -16,5 +16,11 @@ export default [
         routeName: "ImagePicker",
         routeLink: "/ResizableSplitView",
         demoPath: '../components/ImagePicker/demo.vue'
+    },
+    {
+        label: "循环轮播图",
+        routeName: "Carousel",
+        routeLink: '/Carousel',
+        demoPath: "../components/LoopingCarousel/demo.vue"
     }
 ]
