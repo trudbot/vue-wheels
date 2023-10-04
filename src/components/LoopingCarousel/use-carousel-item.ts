@@ -15,10 +15,11 @@ export const useCarouselItem = (
     }
 
     const move = (x: number) => {
+        dom.value?.classList.remove("no-animation");
         let updated = translate.value + x;
         if (-1 * updated > clientWidth.value + offsetLeft.value) {
-            console.log("超越")
             updated += carouselContext.totalWidth.value;
+            dom.value?.classList.add("no-animation")
         }
         translate.value = updated;
     }
@@ -41,6 +42,6 @@ export const useCarouselItem = (
     })
 
     return {
-        translate
+        translate,
     }
 }

@@ -15,7 +15,9 @@ const {translate} = useCarouselItem(box);
 </script>
 
 <template>
-  <div class="carousel-item-container" :style="{width: (props.width ? props.width : 'auto'), translate: translate + 'px'}" ref="box">
+  <div class="carousel-item-container"
+       :style="{width: (props.width ? props.width : 'auto'), translate: translate + 'px'}"
+       ref="box">
     <slot></slot>
   </div>
 </template>
@@ -24,6 +26,6 @@ const {translate} = useCarouselItem(box);
 .carousel-item-container {
   height: 100%;
   flex-shrink: 0;
-  translate: -100px;
+  transition: all 0.3s linear;
 }
 </style>

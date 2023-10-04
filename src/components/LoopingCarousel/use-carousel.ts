@@ -2,7 +2,6 @@ import {computed, getCurrentInstance, onMounted, onUnmounted, provide, ref} from
 import {useOrderedChildren} from "./hooks/useOrderedChildren.ts";
 import {carouselContextKey, carouselItemContext} from "./constants.ts";
 
-const speed = 100;
 export const useCarousel = () => {
     const instance = getCurrentInstance();
 
@@ -29,12 +28,12 @@ export const useCarousel = () => {
 
     function startTimer() {
         if (timer.value) return
-        timer.value = setInterval(() => playSlides(), 10)
+        timer.value = setInterval(() => playSlides(), 50)
     }
 
     function playSlides() {
         items.value.forEach(item => {
-            item.move(-0.5);
+            item.move(-3);
         })
     }
 
