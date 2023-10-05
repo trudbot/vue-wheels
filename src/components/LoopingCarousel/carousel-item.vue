@@ -28,4 +28,8 @@ const {translate} = useCarouselItem(box);
   flex-shrink: 0;
   transition: all 0.3s linear;
 }
+
+.no-animation {
+  transition: none;
+}
 </style>

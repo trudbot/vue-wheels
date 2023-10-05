@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import LoopingCarousel from './index.vue'
 import CarouselItem from "./carousel-item.vue";
-import {dark} from "../../assets/colorSystem.ts";
 
 const images = [
     'https://trudbot-md-img.oss-cn-shanghai.aliyuncs.com/1.webp',

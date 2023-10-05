@@ -1,9 +1,12 @@
 <script setup lang="ts">
 
 import {useCarousel} from "./use-carousel.ts";
+import {getCurrentInstance, onMounted} from "vue";
 
 useCarousel();
-
+onMounted(() => {
+  console.log(getCurrentInstance())
+})
 </script>
 
 <template>
@@ -11,6 +14,7 @@ useCarousel();
     <div class="box">
       <slot></slot>
     </div>
+    <div></div>
   </div>
 </template>
 
